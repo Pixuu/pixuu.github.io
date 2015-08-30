@@ -31,6 +31,60 @@
 				</p>
 			</section>
 
+			<section>
+				<h2>Protokollat</h2>
+				<p>
+                	Valitsin kaksi tällähetkellä omasta 
+                    <br>mielestäni mielenkiintoisinta protokollaa:
+					<li>HTTPS</li>
+                    <li>TCP</li>
+				</p>
+			</section>
+            
+ 			<section>
+            	<section>
+					<h2>HTTPS</h2>
+					<ul>
+                		<b>Yksinkertaisuudessaan HTTP -protokolla SSL suojauksella.</b>
+                        <li>Suojataan liikkuva tieto käyttäjän ja palvelimen välillä.</li>
+                        <li>Suojaa hyökkäyksiltä jossa hakkeri asettuu käyttäjän ja palvelimen välille. Tietoa ei pystytä muokkaamaan kun liikkuva data on kryptattuna.</li>
+                        <li>Käyttää defaulttina porttia 443</li>
+					</ul>
+                </section>
+                
+                 <section>
+					<p>
+                    	<b>Protokollana toimii samalla tavalla kuin HTTP -protokolla mutta kaikki liikkuva data on kryptattu.</b>
+                		<li>HTTP -protokollaa käytetään tiedonsiirtoon, esim. käyttäjä ottaa TCP-yhteyden selaimella palvelimelle josta hän saa vastaukseksi sivuston.</li>
+					</p>
+                </section>
+			</section>
+            
+            
+ 			<section>
+            	<section>
+					<h2>TCP</h2>
+					<p>
+                		<b>Yksinkertaisuudessaan protokolla joka mahdollistaa erilaisen datan siirtämisen laitteiden välillä.</b>
+                        	<li>Tarkistaa että data menee varmasti perille ja lähettää halutessa uudestaan jos epäonnistuu.</li>
+                        	<li>Tiedonsiirto on hieman hitaampaa kuin vastaavalla UDP:llä.</li>
+                        	<li>Vaatii myös yhteyden laitteiden välille jota UDP:llä ei vaadita.</li>
+                        
+					</p>
+                </section>
+                
+                 <section>
+					<p>
+                    	<b>Yhteys sisältää kolme eri vaihetta:</b>
+                        <ul>
+                				<li>Yhteyden muodostaminen johon käytetään tiettyä "kolmitiekättelyä", jossa laite lähettää ensin kohteelle paketin. Tämän paketin saatuaan kohde lähettää laitteelle paketin joka sisältää myös vastauspaketin jonka laite palauttaa vielä kohteelle. (Hieman ehkä hankalasti selitetty? :D)</li>
+                           		<li>Tiedonsiirto vaiheessa siirretään itse data jota kontrolloidaan monella eri mekanismilla.</li>
+                            	<li>Yhteyden päättämisessä yhteys katkaistaan joko "kolmitiekättelyllä" tai suoraan lähettämällä paketti yhteyden katkaimisesta.</li>
+                         </ul>
+					</p>
+                </section>
+			</section>
+			
 			</div>
 	</div>
 	<script src="lib/js/head.min.js"></script>
